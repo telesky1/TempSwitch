@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>温控开关筛选器</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="天士凯LOGO.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🔍 温控开关筛选器</h1>
+
+    <div class="filters">
+      <div class="filter">
+        <label for="temperature">温度选择</label>
+        <select id="temperature"></select>
+      </div>
+
+      <div class="filter">
+        <label for="type">开关类型</label>
+        <select id="type">
+          <option value="">全部类型</option>
+          <option value="常闭">常闭型</option>
+          <option value="常开">常开型</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <label for="current">额定电流</label>
+        <select id="current">
+          <option value="">全部电流</option>
+          <option value="10A">10A</option>
+          <option value="16A">16A</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <label for="attribute">属性选择</label>
+        <select id="attribute">
+          <option value="">全部类型</option>
+          <option value="平脚活动环">平脚活动环</option>
+          <option value="平脚固定环">平脚固定环</option>
+          <option value="弯脚固定环">弯脚固定环</option>
+        </select>
+      </div>
+      <div class="filter">
+        <button id="reset-button" class="reset-button" aria-label="重置筛选">🔄</button>
+      </div>
+    </div>
+
+    <div id="results" class="results-grid"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
